@@ -1,0 +1,27 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "openshift-registry-proxy",
+    "creationTimestamp": null
+  },
+  "spec": {
+      "containers": [
+        {
+          "image": "openshift/origin-registry-proxy",
+          "imagePullPolicy": "IfNotPresent",
+          "name": "openshift-registry-proxy-1",
+          "ports": [
+            {
+              "containerPort": 5000,
+              "hostPort": 5000
+            }
+          ]
+        }
+      ],
+    "restartPolicy": "Always",
+    "dnsPolicy": "ClusterFirst"
+  },
+  "status": {}
+}
+
